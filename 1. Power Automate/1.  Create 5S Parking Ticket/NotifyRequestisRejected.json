@@ -1,0 +1,37 @@
+{
+    "properties": {
+        "__metadata": {
+            "type": "SP.Utilities.EmailProperties"
+        },
+        "To": {
+            "results": [
+                @{variables('givenemail')}
+            ]
+        },
+        "CC": {
+            "results": [""
+            ]
+        },
+        "Body":"<p>Dear @{variables('cluster')} team,</p>
+
+        <p>Your 5S Temporary Parking request is&nbsp;<strong>rejected</strong>!</p>
+        
+        <p>&nbsp;</p>
+        
+        <blockquote>
+        <p>Reason: The start &amp; end date you set has exceeded the 4 weeks limit.&nbsp;</p>
+        
+        <p>Next Action: Please raise another request with the dates within the 4 weeks limit.</p>
+        </blockquote>
+        
+        <p>&nbsp;</p>
+        
+        <p>Thanks!</p>
+        
+        <p>- CIP</p>
+        
+        "
+	,
+        "Subject": "5S Temporary Parking: Request Rejected"
+    }
+}
